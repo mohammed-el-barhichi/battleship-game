@@ -13,7 +13,7 @@ class TestTorpedoLauncher(TestCase):
         torpedo_launcher.fire_at(3, 3, -1)
 
         # Assert
-        self.assertEqual(14, torpedo_launcher.get_ammunitions())
+        self.assertEqual(23, torpedo_launcher.get_ammunitions())
 
     def test_fire_at_raise_error_when_z_gt_zero(self):
         # Arrange
@@ -26,7 +26,7 @@ class TestTorpedoLauncher(TestCase):
         # Assert
         self.assertEqual("Impossible d'atteindre la cible ! z doit être <= 0",
                          str(error_context.exception))
-        self.assertEqual(14, torpedo_launcher.get_ammunitions())
+        self.assertEqual(23, torpedo_launcher.get_ammunitions())
 
     def test_fire_at_raise_error_when_ammunitions_eq_zero(self):
         # Arrange
@@ -34,7 +34,7 @@ class TestTorpedoLauncher(TestCase):
 
         # Act
         with self.assertRaises(NoAmmunitionError) as error_context:
-            for _ in range(16):
+            for _ in range(25):
                 torpedo_launcher.fire_at(3, 3, 0)
 
         # Assert
