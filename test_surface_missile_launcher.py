@@ -13,7 +13,7 @@ class TestSurfaceMissileLauncher(TestCase):
         surface_missile_launcher.fire_at(3, 3, 0)
 
         # Assert
-        self.assertEqual(39, surface_missile_launcher.get_ammunitions())
+        self.assertEqual(49, surface_missile_launcher.get_ammunitions())
 
     def test_fire_at_raise_error_when_z_gt_zero(self):
         # Arrange
@@ -26,7 +26,7 @@ class TestSurfaceMissileLauncher(TestCase):
         # Assert
         self.assertEqual("Impossible d'atteindre la cible ! z doit être = 0",
                          str(error_context.exception))
-        self.assertEqual(39, surface_missile_launcher.get_ammunitions())
+        self.assertEqual(49, surface_missile_launcher.get_ammunitions())
 
     def test_fire_at_raise_error_when_ammunitions_eq_zero(self):
         # Arrange
@@ -34,7 +34,7 @@ class TestSurfaceMissileLauncher(TestCase):
 
         # Act
         with self.assertRaises(NoAmmunitionError) as error_context:
-            for _ in range(41):
+            for _ in range(51):
                 surface_missile_launcher.fire_at(3, 3, 0)
 
         # Assert

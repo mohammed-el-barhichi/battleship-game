@@ -4,7 +4,7 @@ from weapon import Weapon
 
 class TorpedoLauncher(Weapon):
     def __init__(self):
-        super().__init__(ammunitions=15, range=20)
+        super().__init__(ammunitions=24, range=40)
 
     def check_target_position(self, x, y, z):
         if z > 0:

@@ -4,7 +4,7 @@ from weapon import Weapon
 
 class AirMissileLauncher(Weapon):
     def __init__(self):
-        super().__init__(ammunitions=50, range=40)
+        super().__init__(ammunitions=40, range=20)
 
     def check_target_position(self, x, y, z):
         if z <= 0:
