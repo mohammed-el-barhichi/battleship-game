@@ -1,15 +1,17 @@
 from math import sqrt
 
-from exceptions import DestroyedError, OutOfRangeError
-from weapon import Weapon
+from model.exceptions import DestroyedError, OutOfRangeError
+from model.weapon import Weapon
 
 
 class Vessel:
     def __init__(self, x: float, y: float, z: float, hits: int,
                  weapon: Weapon):
+        self.id = None
         self.coordinates = x, y, z
         self.hits_to_be_destroyed = hits
         self.weapon = weapon
+        self.type = type(self).__name__
 
     def go_to(self, x, y, z):
         if self.hits_to_be_destroyed == 0:
@@ -30,6 +32,8 @@ class Vessel:
         self.weapon.fire_at(x, y, z)
 
     def touched(self):
+        if self.hits_to_be_destroyed <= 0:
+            raise DestroyedError('Vessel destroyed !')
         self.hits_to_be_destroyed = self.hits_to_be_destroyed - 1
 
     def get_weapon(self) -> Weapon:

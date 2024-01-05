@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from cruiser import Cruiser
-from exceptions import OutOfRangeError
+from model.cruiser import Cruiser
+from model.exceptions import OutOfRangeError
 
 
 class TestCruiser(TestCase):

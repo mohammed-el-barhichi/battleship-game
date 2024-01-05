@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from exceptions import NoAmmunitionError, OutOfRangeError
-from surface_missile_launcher import SurfaceMissileLauncher
+from model.exceptions import NoAmmunitionError, OutOfRangeError
+from model.surface_missile_launcher import SurfaceMissileLauncher
 
 
 class TestSurfaceMissileLauncher(TestCase):

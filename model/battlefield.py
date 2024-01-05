@@ -1,19 +1,20 @@
 from functools import reduce
 from typing import Optional
 
-from exceptions import OutOfRangeError
-from vessel import Vessel
+from model.exceptions import OutOfRangeError
+from model.vessel import Vessel
 
 
 class Battlefield:
     def __init__(self, min_x: int, max_x: int, min_y: int, max_y: int,
                  min_z: int, max_z: int, max_power: int = 22):
+        self.id = None
         self.vessels: list[Vessel] = []
         self.min_x = min_x
-        self.min_y = min_y
-        self.min_z = min_z
         self.max_x = max_x
+        self.min_y = min_y
         self.max_y = max_y
+        self.min_z = min_z
         self.max_z = max_z
         self.max_power = max_power
 
@@ -27,7 +28,7 @@ class Battlefield:
         if self.get_vessel_by_coordinates(x, y, z) is not None:
             raise ValueError("Il y a déjà un vaisseau positionné ici !")
         if self.get_power() + vessel.get_hits() > self.max_power:
-            raise ValueError(f"La puissance dépasse la maximum autorisé "
+            raise ValueError(f"La puissance dépasse le maximum autorisé "
                              f"{self.max_power} !")
 
         self.vessels.append(vessel)
@@ -56,3 +57,13 @@ class Battlefield:
             lambda vessel_n, vessel_n_plus_1:
             vessel_n + vessel_n_plus_1.get_hits(),
             self.vessels, 0)
+
+    def get_battlefield_space(self) -> tuple:
+        return (self.min_x, self.max_x, self.min_y,
+                self.max_y, self.min_z, self.max_z)
+
+    def get_vessel_by_id(self, vessel_id) -> Optional[Vessel]:
+        for vessel in self.vessels:
+            if vessel.id == vessel_id:
+                return vessel
+        return None

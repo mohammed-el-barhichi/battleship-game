@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from exceptions import OutOfRangeError
-from frigate import Frigate
+from model.exceptions import OutOfRangeError
+from model.frigate import Frigate
 
 
 class TestFrigate(TestCase):

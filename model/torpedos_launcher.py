@@ -1,5 +1,5 @@
-from exceptions import OutOfRangeError
-from weapon import Weapon
+from model.exceptions import OutOfRangeError
+from model.weapon import Weapon
 
 
 class TorpedoLauncher(Weapon):

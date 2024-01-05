@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from exceptions import DestroyedError
-from vessel import Vessel
+from model.exceptions import DestroyedError
+from model.vessel import Vessel
 
 
 class TestVessel(TestCase):

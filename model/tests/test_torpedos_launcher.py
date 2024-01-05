@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from exceptions import OutOfRangeError, NoAmmunitionError
-from torpedos_launcher import TorpedoLauncher
+from model.exceptions import OutOfRangeError, NoAmmunitionError
+from model.torpedos_launcher import TorpedoLauncher
 
 
 class TestTorpedoLauncher(TestCase):
