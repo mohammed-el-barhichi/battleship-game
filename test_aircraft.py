@@ -1,10 +1,10 @@
 from unittest import TestCase
 
-from exceptions import OutOfRangeError
-from aircraft import Aircraft
+from model.exceptions import OutOfRangeError
+from model.aircraft import Aircraft
 
 
-class Testaircraft(TestCase):
+class TestAircraft(TestCase):
     def test_go_to_success(self):
         # Arrange
         aircraft = Aircraft(0, 0, 0)
