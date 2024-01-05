@@ -1,6 +1,6 @@
 from typing import Optional
 
-from dao.game_dao import GameDao, VesselTypes
+from game_dao import GameDao, VesselTypes
 from model.battlefield import Battlefield
 from model.cruiser import Cruiser
 from model.destroyer import Destroyer

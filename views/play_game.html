@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles/style.css">
+<script src="scripts/play-game.js"></script>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Bataille navale</title>
+</head>
+<body>
+<div id="menu">
+    <ul id="onglets">
+        <li><a href="home.html"> Accueil </a></li>
+        <li><a href="create_game.html"> Créez une partie </a></li>
+        <li><a href="join_game.html"> Rejoignez une partie </a></li>
+        <li><a href="manage_fleet.html"> Gérez votre flotte </a></li>
+        <li class="active"><a href="play_game.html"> Jouez votre partie </a></li>
+    </ul>
+</div>
+
+<div class="vertical-container">
+    <div id="game-result"></div>
+    <div id="fire-result"></div>
+    <form id="fire-form">
+        <div class="horizontal-container">
+            <div class="vertical-container">
+                <input type="number" id="vessel-id" name="vessel_id" hidden>
+                <div class="your-table">
+                    <table id="your-table">
+                        <thead>
+                        <th>Vessel</th>
+                        <th>Coordonnées</th>
+                        <th>Résistance</th>
+                        <th>Arme</th>
+                        <th>Munitions</th>
+                        <th>Rayon d'action</th>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="target-coord">
+                    <label>Coordonnées de la cible:</label><br>
+                    <label for="x">X:</label><br>
+                    <input type="number" id="x" name="x" value="0"><br>
+                    <label for="y">Y:</label><br>
+                    <input type="number" id="y" name="y" value="0"><br>
+                    <label for="z">Z:</label><br>
+                    <input type="number" id="z" name="z" value="0"><br><br>
+                </div>
+            </div>
+            <input class="submit-button fire-button" type="submit" value="Feu !">
+            <div class="battle-field">
+                <table id="battle-field">
+
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
