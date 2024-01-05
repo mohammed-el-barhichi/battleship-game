@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from model.exceptions import OutOfRangeError
-from model.aircraft import Aircraft
+from exceptions import OutOfRangeError
+from aircraft import Aircraft
 
 
 class TestAircraft(TestCase):
