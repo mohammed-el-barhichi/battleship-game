@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Optional
 
 import uvicorn
@@ -9,11 +8,10 @@ from starlette.staticfiles import StaticFiles
 
 from model.game import Game
 from model.player import Player
-from services.game_service import GameService
+from game_service import GameService
 
 app = FastAPI()
-BASE_PATH = Path(__file__).resolve().parent.parent
-app.mount("/views", StaticFiles(directory=BASE_PATH / 'views'), name="views")
+app.mount("/views", StaticFiles(directory='views'), name="views")
 
 game_service = GameService()
 

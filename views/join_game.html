@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles/style.css">
+<script src="scripts/join-game.js"></script>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Bataille navale</title>
+</head>
+<body>
+<div id="menu">
+    <ul id="onglets">
+        <li><a href="home.html"> Accueil </a></li>
+        <li><a href="create_game.html"> Créez une partie </a></li>
+        <li class="active"><a href="join_game.html"> Rejoignez une partie </a></li>
+        <li><a href="manage_fleet.html"> Gérez votre flotte </a></li>
+    </ul>
+</div>
+<div class="vertical-container">
+    <div class="form-result" id="join-game-result"></div>
+    <form class="centered-form" id="join-game-form">
+        <label for="player-name">Ton pseudo:</label><br>
+        <input type="text" id="player-name" name="player_name" required><br><br>
+
+        <label for="game-id">Identifiant de la partie:</label><br>
+        <input type="text" id="game-id" name="game_id" required><br><br>
+
+        <input class="submit-button" type="submit" value="Valider">
+    </form>
+</div>
+</body>
+</html>

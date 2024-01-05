@@ -18,7 +18,8 @@ from model.torpedos_launcher import TorpedoLauncher
 from model.vessel import Vessel
 from model.weapon import Weapon
 
-engine = create_engine('sqlite:////tmp/tdlog.db', echo=True,
+engine = create_engine('sqlite:///C:/Users/moham/Documents/GitHub/\
+                       battleship-game/views/tdlog.db', echo=True,
                        future=True)
 Base = declarative_base(bind=engine)
 Session = sessionmaker(bind=engine)

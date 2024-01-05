@@ -1,0 +1,163 @@
+#onglets {
+    font: bold 14px Batang, arial, serif;
+    list-style-type: none;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #9EA0A1;
+    margin-left: 0;
+}
+
+#onglets li {
+    float: left;
+    height: 37px;
+    background-color: #F4F9FD;
+    margin: 2px 2px 0 2px;
+    border: 1px solid #9EA0A1;
+}
+
+#onglets li.active {
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+
+#onglets a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#onglets a:hover {
+    background: #fff;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.centered-element {
+    margin-left: 20%;
+    margin-right: auto;
+    background-color: #BFBEBE;
+    padding: 15px;
+    width: 120px;
+}
+
+.centered-form {
+    padding: 15px;
+    margin-left: 80px;
+}
+
+input {
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: #333;
+}
+
+.submit-button {
+    padding: 5px 15px;
+    background: #ccc;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-button:hover {
+    background: #828080;
+}
+
+.submit-button:focus {
+    background: #8d7979;
+}
+
+.form-result {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.vessel-form-result {
+    visibility: hidden;
+    margin-left: 10%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #9ddde8;
+}
+
+.vessels-table {
+    padding-top: 30px;
+    margin-left: 20%;
+}
+
+.error {
+    color: #a41e1e;
+}
+
+.success {
+    color: #356716;
+}
+
+.play-game {
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 150px;
+}
+
+.your-table {
+    margin: 15px;
+    cursor: pointer;
+}
+
+.your-table tr:hover {
+    background: #b5c2c7;
+}
+
+.selected {
+    background: #9EA0A1;
+}
+
+.friend-vessel {
+    background: #1b1f21;
+}
+
+.fire-button {
+    margin-top: 100px;
+    height: 45px;
+}
+
+.battle-field {
+    cursor: pointer;
+    margin: 15px;
+}
+
+.battle-field td:hover {
+    background: #e06666;
+}
+
+.target-vessel {
+    background: #a41e1e;
+}
+
+.target-coord {
+    padding: 15px;
+}
